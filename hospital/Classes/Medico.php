@@ -7,16 +7,23 @@
 
 		private $matricula;
 		private $salario;
+		/**
+		 * Aqui temos associação, a classe Medico está associada com a classe Endereco;
+		 */
+		private $endereco;
 
 		/**
 		 * Não vou comentar sobre esses getters e setters, ja uso eles de mais...
 		 * espera... isso aqui não é um comentario?
 		 */
 		public function getMatricula(){ return $this->matricula; }
-		public function serMatricula($matricula ){ $this->matricula = $matricula; }
+		public function setMatricula($matricula ){ $this->matricula = $matricula; }
 		
 		public function getSalario(){ return $this->salario; }
 		public function setSalario($salario){ $this->salario = $salario; }
+
+		public function getEndereco(){ return $this->endereco; }
+		public function setEnderco(Endereco $endereco){ $this->endereco = $endereco; }
 
 		/**
 		 * @method metodo que deve ser escrito em cada tipo de médico.
@@ -24,4 +31,12 @@
 		 * mas sao legais :)
 		 */
 		abstract public function procedimento();
+
+		public function operar(){
+			echo "metodo da classe Medico: um metodo de operar generico";
+		}
+
+		protected function teste(){
+			return 'retorno da classe Medico';
+		}
 	}

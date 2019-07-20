@@ -30,4 +30,24 @@
 		public function examinar(){
 			echo "Pelo que os exames mostram, voce está com frescurite aguda!";
 		}
+		/**
+		 * Este metodo está sobrescrevendo o operar da classe Medico.
+		 * ele está chamando o metodo operar da classe Medico primeiro.
+		 * ou seja, executando o codigo "original" e depois adicionando seu proprio tompero.
+		 */
+		public function operar(){
+			// Lembrando que em C# seria base.operar(); 
+			parent::operar();
+			echo "<br>agora faz as coisas especificas dessa classe(Cirurgiao).";
+		}
+		/**
+		 * Esse metodo foi declarado na Class Medico como protected.
+		 * Foi alterada a visibilidade deste metodo
+		 * Ele está chamando o metodo teste da classe pai, e adicionando mais coisa
+		 * Após receber o retorno.
+		 */
+		public function teste(){
+			$ret = parent::teste();
+			echo $ret." | adicionando codigo após pegar o resultado do teste da class Medico";
+		}
 	}
