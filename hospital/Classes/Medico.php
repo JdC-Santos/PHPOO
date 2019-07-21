@@ -8,7 +8,11 @@
 		private $matricula;
 		private $salario;
 		/**
-		 * Aqui temos associação, a classe Medico está associada com a classe Endereco;
+		 * Aqui temos associação estrutural, a classe Medico está associada com a classe Endereco;
+		 * Este tipo de associação é chamado de composição.
+		 * pois um endereço(parte) compoe um médico (todo) e apenas UM
+		 * este endereço nao deve existir sem se conectar a um medico
+		 * e nao deve existir em mais de 1 médico.
 		 */
 		private $endereco;
 

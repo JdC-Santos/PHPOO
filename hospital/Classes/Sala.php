@@ -3,7 +3,9 @@
 	 * A sala precisa usar a classe Medico, ja que irá guardar em um array
 	 * todos os médicos que entrarem na operação que está sendo feita nela.
 	 */
+	include_once 'Anestesista.php';
 	include_once 'Cirurgiao.php';
+	include_once 'Paciente.php';
 	/**
 	 * A sala não é um tipo de "usuario", por isso ela nao pode herdar User.
 	 * Mas toda sala precisa de um conjunto de "coisas" ou ferramentas
@@ -13,6 +15,7 @@
 
 	class Sala implements InterfaceSala {
 		private $medicos = []; // vai receber um array de médicos que estão nela
+		private $paciente; // vai receber um obj do tipo Paciente
 		private $ocupada; // verdadeiro ou falso, pode ou nao estar ocupada.
 		private $tipoOperacao; //guarda o tipo de operação que está sendo feita nela.
 
@@ -44,4 +47,7 @@
 			//atualiza o array de medico da sala.
 			$this->medicos = $arrMedicos;
 		}
+
+		public function getPaciente(){ return $this->paciente; }
+		public function setPaciente(Paciente $paciente){ $this->paciente; }
 	}
