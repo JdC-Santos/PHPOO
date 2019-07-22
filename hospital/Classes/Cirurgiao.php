@@ -6,10 +6,11 @@
 	 */
 	include_once 'Medico.php';
 	include_once 'Interfaces/InterfaceMedico.php';
+	include_once 'Interfaces/Iteste.php';
 	/**
 	 * O final significa que essa classe nao pode ter filhos, coitada :(
 	 */
-	final class Cirurgiao extends Medico implements InterfaceMedico{
+	final class Cirurgiao extends Medico implements InterfaceMedico,Iteste{
 		/**
 		 * da pra usar __construct ou o nome da classe como metodo Construtor!
 		 */
@@ -49,5 +50,13 @@
 		public function teste(){
 			$ret = parent::teste();
 			echo $ret." | adicionando codigo após pegar o resultado do teste da class Medico";
+		}
+		/**
+		 * Este metodo veio da segunda interface que esta classe está implementando
+		 * foi implementada a segunda interface apenas para saber como funciona a
+		 * implementação de 2 ou mais interfaces
+		 */
+		public function metodoTeste($p1,$p2){
+			echo "<br>segunda interface implementada com sucesso!<br>";
 		}
 	}

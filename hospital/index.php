@@ -20,6 +20,7 @@
 	echo "<br>---------------------------------------<br>";
 	$c1->operar();
 	echo "<br>---------------------------------------<br>";
+	$c1->metodoTeste(1,2);
 	/**
 	 * Fazendo um teste: ao sobrecrever um metodo, vc pode tornar ela publica, privada, ou protected.
 	 * Entao alem do corpo, é possivel mudar a visibilidade dela!
