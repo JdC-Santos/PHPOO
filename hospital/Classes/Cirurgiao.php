@@ -1,4 +1,5 @@
 <?php 
+	
 	/**
 	 * Aparentemente nao preciso dar include na classe User, pois ela ja está
 	 * sendo chamada dentro da classe Medico, que por sua vez está sendo

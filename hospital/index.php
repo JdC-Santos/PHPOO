@@ -10,6 +10,7 @@
 /**
  *	Dando include nas Classes para poder usa-las
  */
+	// use Classes\Cirurgiao;
 	include_once 'Classes/Cirurgiao.php';
 	include_once 'Classes/Anestesista.php';
 	include_once 'Classes/Sala.php';
